@@ -1,2 +1,2 @@
 # delugeProject
-Interactive map for HIST 80A
+Interactive map for HIST 70A
