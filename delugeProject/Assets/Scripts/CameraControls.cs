@@ -16,6 +16,9 @@ public class CameraControls : MonoBehaviour
     private InputAction mouseScroll;
     private Camera cameraComponent;
 
+    public delegate void CameraZoomed();
+    public event CameraZoomed cameraZoomed;
+
 	private void Start()
 	{
 		mousePosition = InputSystem.actions.FindAction("MousePosition");
@@ -43,6 +46,11 @@ public class CameraControls : MonoBehaviour
 		{
 			cameraComponent.orthographicSize -= mouseScroll.ReadValue<Vector2>().y * scrollModifier;
             cameraComponent.orthographicSize = Mathf.Max(minZoom, Mathf.Min(maxZoom, cameraComponent.orthographicSize));
+
+            if (cameraZoomed != null)
+            {
+                cameraZoomed();
+            }
 		}
 
         //Camera bounds
