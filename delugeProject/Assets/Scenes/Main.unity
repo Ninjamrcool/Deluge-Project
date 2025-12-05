@@ -484,8 +484,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Camera
   topRightCorner: {x: 29, y: 16.4}
   bottomLeftCorner: {x: -29, y: -16.4}
-  dragModifier: 0.05
-  scrollModifier: 0.7
+  dragModifier: 4.5
+  movementModifier: 20
+  scrollModifier: 63
   minZoom: 3
   maxZoom: 16.3
 --- !u!1 &606191067

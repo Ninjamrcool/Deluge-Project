@@ -6,6 +6,7 @@ public class CameraControls : MonoBehaviour
     [SerializeField] private Vector2 topRightCorner;
     [SerializeField] private Vector2 bottomLeftCorner;
     [SerializeField] private float dragModifier = 0.7f;
+    [SerializeField] private float movementModifier = 0.7f;
     [SerializeField] private float scrollModifier = 0.7f;
     [SerializeField] private float minZoom = 0.5f;
     [SerializeField] private float maxZoom = 9f;
@@ -14,6 +15,7 @@ public class CameraControls : MonoBehaviour
     private InputAction mousePosition;
     private InputAction mouseDown;
     private InputAction mouseScroll;
+    private InputAction movement;
     private Camera cameraComponent;
 
     public delegate void CameraZoomed();
@@ -24,6 +26,7 @@ public class CameraControls : MonoBehaviour
 		mousePosition = InputSystem.actions.FindAction("MousePosition");
 		mouseDown = InputSystem.actions.FindAction("MouseDown");
 		mouseScroll = InputSystem.actions.FindAction("MouseScroll");
+		movement = InputSystem.actions.FindAction("Move");
 		cameraComponent = gameObject.GetComponent<Camera>();
 	}
 
@@ -37,20 +40,26 @@ public class CameraControls : MonoBehaviour
         else if (mouseDown.IsPressed() && lastMousePosition != null)
 		{
             Vector2 newMousePosition = mousePosition.ReadValue<Vector2>();
-            transform.position += (Vector3)(lastMousePosition - newMousePosition) * dragModifier;
+            transform.position += (Vector3)(lastMousePosition - newMousePosition) * dragModifier * Time.deltaTime;
             lastMousePosition = newMousePosition;
 		}
 
         //Camera Zooming
         if (mouseScroll.ReadValue<Vector2>() != Vector2.zero)
 		{
-			cameraComponent.orthographicSize -= mouseScroll.ReadValue<Vector2>().y * scrollModifier;
+			cameraComponent.orthographicSize -= mouseScroll.ReadValue<Vector2>().y * scrollModifier * Time.deltaTime;
             cameraComponent.orthographicSize = Mathf.Max(minZoom, Mathf.Min(maxZoom, cameraComponent.orthographicSize));
 
             if (cameraZoomed != null)
             {
                 cameraZoomed();
             }
+		}
+
+        //Camera Moving
+        if (movement.ReadValue<Vector2>() != Vector2.zero)
+		{
+			transform.position += (Vector3)(movement.ReadValue<Vector2>() * movementModifier * Time.deltaTime);
 		}
 
         //Camera bounds
