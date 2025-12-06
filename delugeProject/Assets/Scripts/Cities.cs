@@ -3,7 +3,6 @@ using TMPro;
 public class Cities : MonoBehaviour
 {
     [SerializeField] private float maxScale = 1.425f;
-    [SerializeField] float cityNameHorizontalRadius;
     [SerializeField] float baseOrthographicSize;
     [SerializeField] TMP_Text cityText;
     private Camera mainCamera;
@@ -19,7 +18,6 @@ public class Cities : MonoBehaviour
 		{
 			textRectTransform.anchoredPosition = new Vector2(textRectTransform.anchoredPosition.x, textRectTransform.anchoredPosition.y * -1);
 		}
-		textRectTransform.anchoredPosition = new Vector2(Random.Range(-1 * cityNameHorizontalRadius, cityNameHorizontalRadius), textRectTransform.anchoredPosition.y);
 	}
 
 	private void ScaleCity()
