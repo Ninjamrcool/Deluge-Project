@@ -10,6 +10,7 @@ public class CameraControls : MonoBehaviour
     [SerializeField] private float scrollModifier = 0.7f;
     [SerializeField] private float minZoom = 0.5f;
     [SerializeField] private float maxZoom = 9f;
+    [SerializeField] private Timeline timelineScript;
 
     private Vector2 lastMousePosition;
     private InputAction mousePosition;
@@ -33,11 +34,11 @@ public class CameraControls : MonoBehaviour
 	private void Update()
     {
         //Camera Dragging
-        if (mouseDown.WasPressedThisFrame())
+        if (mouseDown.WasPressedThisFrame() && !timelineScript.GetIsDragging())
 		{
 			lastMousePosition = mousePosition.ReadValue<Vector2>();
 		}
-        else if (mouseDown.IsPressed() && lastMousePosition != null)
+        else if (mouseDown.IsPressed() && lastMousePosition != null && !timelineScript.GetIsDragging())
 		{
             Vector2 newMousePosition = mousePosition.ReadValue<Vector2>();
             transform.position += (Vector3)(lastMousePosition - newMousePosition) * dragModifier * Time.deltaTime;
