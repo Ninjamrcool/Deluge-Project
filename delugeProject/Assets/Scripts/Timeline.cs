@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class Timeline : MonoBehaviour, IPointerDownHandler
 {
@@ -12,17 +13,20 @@ public class Timeline : MonoBehaviour, IPointerDownHandler
     [SerializeField] private float minX;
     [SerializeField] private float maxX;
     [SerializeField] private GameObject timelineValidYearPrefab;
+    [SerializeField] private Image prussiaBorders;
 
     [SerializeField] private RectTransform rectTransform;
     [SerializeField] private RectTransform parentRectTransform;
     [SerializeField] private RectTransform timelineYearsFolder;
 
+    private float currentYear;    
     private bool dragging = false;    
     private InputAction mousePosition;
     private InputAction mouseDown;
 
 	private void Start()
 	{
+        currentYear = validTimelineYears[0];
         mousePosition = InputSystem.actions.FindAction("MousePosition");
 		mouseDown = InputSystem.actions.FindAction("MouseDown");
 
@@ -66,9 +70,23 @@ public class Timeline : MonoBehaviour, IPointerDownHandler
 					}
                 }
                 rectTransform.anchoredPosition = new Vector2(ConvertValidTimelineYearsIndexToPosition(nearestTimelineIndex), rectTransform.anchoredPosition.y);
+                currentYear = validTimelineYears[nearestTimelineIndex];
+                UpdateTimelineYear(currentYear);
 			}
 
 			yield return null;
+		}
+	}
+
+    private void UpdateTimelineYear(float year)
+	{
+        if (year > 1656f)
+		{
+			prussiaBorders.color = new Color(prussiaBorders.color.r, prussiaBorders.color.g, prussiaBorders.color.b, 1f);
+		}
+		else
+		{
+			prussiaBorders.color = new Color(prussiaBorders.color.r, prussiaBorders.color.g, prussiaBorders.color.b, 0.6941176471f);
 		}
 	}
 
