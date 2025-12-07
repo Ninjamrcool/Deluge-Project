@@ -47,6 +47,9 @@ TagManager:
   - name: Overlays
     uniqueID: 4149970497
     locked: 0
+  - name: Borders
+    uniqueID: 3511261449
+    locked: 0
   - name: Cities
     uniqueID: 4285963423
     locked: 0

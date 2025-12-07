@@ -24,9 +24,14 @@ public class Timeline : MonoBehaviour, IPointerDownHandler
     private InputAction mousePosition;
     private InputAction mouseDown;
 
+    public delegate void TimelineUpdated(float year);
+    public event TimelineUpdated timelineUpdated;
+
 	private void Start()
 	{
         currentYear = validTimelineYears[0];
+        UpdateTimelineYear(currentYear);
+
         mousePosition = InputSystem.actions.FindAction("MousePosition");
 		mouseDown = InputSystem.actions.FindAction("MouseDown");
 
@@ -88,6 +93,11 @@ public class Timeline : MonoBehaviour, IPointerDownHandler
 		{
 			prussiaBorders.color = new Color(prussiaBorders.color.r, prussiaBorders.color.g, prussiaBorders.color.b, 0.6941176471f);
 		}
+
+        if (timelineUpdated != null)
+        {
+            timelineUpdated(year);
+        }
 	}
 
     private float ConvertValidTimelineYearsIndexToPosition(int index)
