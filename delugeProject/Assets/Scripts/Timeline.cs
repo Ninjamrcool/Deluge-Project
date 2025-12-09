@@ -88,7 +88,6 @@ public class Timeline : MonoBehaviour, IPointerDownHandler
         if (year > 1656f)
 		{
 			prussiaBorders.color = new Color(prussiaBorders.color.r, prussiaBorders.color.g, prussiaBorders.color.b, 1f);
-            Debug.Log("e");
 		}
 		else
 		{
