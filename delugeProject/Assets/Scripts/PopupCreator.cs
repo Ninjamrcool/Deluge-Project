@@ -1,13 +1,24 @@
+using System;
 using UnityEngine;
 
 public class PopupCreator : MonoBehaviour
 {
+
+    public enum PopupDirection
+	{
+		North,
+        South,
+        East,
+        West
+	}
+
     [System.Serializable]
     public struct Popup
 	{
         [TextArea]
 		public string popupText;
         public Vector2 pointPosition;
+        public PopupDirection pointDirection;
 	} 
 
     [System.Serializable]
@@ -30,7 +41,7 @@ public class PopupCreator : MonoBehaviour
 	{
         for (int i = 0; i < transform.childCount; i++)
 		{
-			Destroy(transform.GetChild(i).gameObject);
+			transform.GetChild(i).gameObject.GetComponent<Popups>().FadeOutAndDestroy();
 		}
 
         for (int i = 0; i < popupYearList.Length; i++)
@@ -52,10 +63,7 @@ public class PopupCreator : MonoBehaviour
 			GameObject newPopup = Instantiate(popupPrefab, transform);
             RectTransform newPopupRect = newPopup.GetComponent<RectTransform>();
             newPopupRect.anchoredPosition = popupYear.popupsList[i].pointPosition;
-            //if (Random.Range(0, 2) == 0)
-			//{
-			//	newPopupRect.localScale = new Vector3(-1 * newPopupRect.localScale.x, newPopupRect.localScale.y, newPopupRect.localScale.z);
-			//}
+            newPopup.GetComponent<Popups>().SetDirection((int)popupYear.popupsList[i].pointDirection);
             newPopup.GetComponent<Popups>().SetText(popupYear.popupsList[i].popupText);
 		}	
 	}

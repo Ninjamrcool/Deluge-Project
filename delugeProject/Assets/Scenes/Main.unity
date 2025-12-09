@@ -1192,8 +1192,10 @@ MonoBehaviour:
     popupsList:
     - popupText: hello there
       pointPosition: {x: 100, y: 0}
+      pointDirection: 0
     - popupText: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
       pointPosition: {x: -800, y: 0}
+      pointDirection: 0
     - popupText: 'THIS TEXT
 
         HAS LOTS
@@ -1217,7 +1219,11 @@ MonoBehaviour:
 
 
 '
-      pointPosition: {x: -1600, y: 0}
+      pointPosition: {x: -1400, y: 0}
+      pointDirection: 1
+    - popupText: hello there
+      pointPosition: {x: 100, y: 0}
+      pointDirection: 1
   popupPrefab: {fileID: 7387444174819257473, guid: d77639279893f094195a42191f849e02, type: 3}
   timelineScript: {fileID: 694079885}
 --- !u!1 &394639735
