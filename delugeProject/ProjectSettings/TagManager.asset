@@ -53,6 +53,9 @@ TagManager:
   - name: Cities
     uniqueID: 4285963423
     locked: 0
+  - name: Popups
+    uniqueID: 2895464345
+    locked: 0
   - name: UI
     uniqueID: 3914449701
     locked: 0
