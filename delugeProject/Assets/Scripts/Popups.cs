@@ -2,9 +2,10 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using System.Collections;
-using UnityEditor.Experimental.GraphView;
+using UnityEngine.EventSystems;
+using System;
 
-public class Popups : MonoBehaviour
+public class Popups : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
 
     [SerializeField] RectTransform popupBody;
@@ -13,9 +14,15 @@ public class Popups : MonoBehaviour
     [SerializeField] TMP_Text popupText;
 	[SerializeField] Image[] images;
 	[SerializeField] float popupFadeTime;
-    [SerializeField] int linesRequiredToScaleUp;
+    [SerializeField] int linesInPrefab;
+    [SerializeField] int linesRequiredToHover;
     [SerializeField] Vector2[] popupDirectionOffsets;
     [SerializeField] GameObject[] pointers;
+
+	private float lastLineCount;
+	private Coroutine lastScaleCoroutine;
+	private string savedText;
+	private float savedLineCount;
 
 	private int direction;
 	private float popupBodyHeight;
@@ -23,10 +30,13 @@ public class Popups : MonoBehaviour
 	private float popupTopStartingY;
 	private float popupBottomStartingY;
 	private float popupTextStartingY;
+	private float popupBodyStartingYScale;
+	
 
 	private void Awake()
 	{
 		popupBodyHeight = popupBody.rect.height;
+		popupBodyStartingYScale = popupBody.localScale.y;
 		popupBodyStartingY = popupBody.anchoredPosition.y;
 		popupTopStartingY = popupTop.anchoredPosition.y;
 		popupBottomStartingY = popupBottom.anchoredPosition.y;
@@ -38,23 +48,59 @@ public class Popups : MonoBehaviour
 	{
 		StartCoroutine(FadeImagesTo(1f, popupFadeTime));
 	}
+	public void OnPointerEnter(PointerEventData eventData)
+    {
+		popupText.ForceMeshUpdate();
+		if (lastScaleCoroutine != null)
+		{
+			StopCoroutine(lastScaleCoroutine);
+		}
+		lastScaleCoroutine = StartCoroutine(ScaleImageTo(savedLineCount, popupFadeTime));
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+		popupText.ForceMeshUpdate();
+		if (lastScaleCoroutine != null)
+		{
+			StopCoroutine(lastScaleCoroutine);
+		}
+		lastScaleCoroutine = StartCoroutine(ScaleImageTo(Mathf.Min(savedLineCount, linesRequiredToHover), popupFadeTime));
+    }
 
     //Called when popup is created by PopupCreator script
     public void SetText(string newText)
 	{
-		popupText.text = newText;
-
+		savedText = newText;
+		
+		popupText.text = savedText;
 		popupText.ForceMeshUpdate();
 
         int lineCount = popupText.textInfo.lineCount;
-		if (lineCount < linesRequiredToScaleUp)
-		{
-			popupBody.localScale = new Vector3(popupBody.localScale.x, 1f, popupBody.localScale.z);
-			return;
-		}
+		savedLineCount = lineCount;
+		UpdateScale(Mathf.Min(lineCount, linesRequiredToHover));
+	}
 
-		popupBody.localScale = new Vector3(popupBody.localScale.x, (1f / (linesRequiredToScaleUp - 1)) * lineCount, popupBody.localScale.z);
-		float changeInHeight = popupBodyHeight * (popupBody.localScale.y - 1);
+	public void FadeOutAndDestroy()
+	{
+		Destroy(gameObject, popupFadeTime);
+		StopAllCoroutines();
+		StartCoroutine(FadeImagesTo(0f, popupFadeTime));
+	}
+
+	//Called when popup is created by PopupCreator script
+	public void SetDirection(int newDirection)
+	{
+		direction = newDirection;
+		gameObject.GetComponent<RectTransform>().anchoredPosition += popupDirectionOffsets[direction];
+		pointers[direction].SetActive(true);
+	}
+
+	public void UpdateScale(float lineCount) //float to allow interpolation 
+	{
+		lastLineCount = lineCount;
+		popupBody.localScale = new Vector3(popupBody.localScale.x, (popupBodyStartingYScale / (linesInPrefab - 1)) * (lineCount - 1), popupBody.localScale.z);
+		float changeInHeight = popupBodyHeight * (popupBody.localScale.y - popupBodyStartingYScale);
 
 	
 		if (direction == 0){//north
@@ -72,21 +118,20 @@ public class Popups : MonoBehaviour
 			popupTop.anchoredPosition = new Vector2(popupTop.anchoredPosition.x, popupTopStartingY + (0.5f * changeInHeight));
 			popupBottom.anchoredPosition = new Vector2(popupBottom.anchoredPosition.x, popupBottomStartingY - (0.5f * changeInHeight));
 		}
-	}
 
-	public void FadeOutAndDestroy()
-	{
-		Destroy(gameObject, popupFadeTime);
-		StopAllCoroutines();
-		StartCoroutine(FadeImagesTo(0f, popupFadeTime));
-	}
-
-	//Called when popup is created by PopupCreator script
-	public void SetDirection(int newDirection)
-	{
-		direction = newDirection;
-		gameObject.GetComponent<RectTransform>().anchoredPosition += popupDirectionOffsets[direction];
-		pointers[direction].SetActive(true);
+		popupText.text = savedText;
+		popupText.ForceMeshUpdate();
+		if (popupText.textInfo.lineCount > Mathf.Floor(lineCount))
+		{
+			string shortText = "";
+			for (int i = 0; i < Mathf.Floor(lineCount); i++)
+			{
+				shortText += popupText.text.Substring(popupText.textInfo.lineInfo[i].firstCharacterIndex, popupText.textInfo.lineInfo[i].characterCount);
+			}
+			shortText = shortText.Substring(0, shortText.Length - 3) + "..."; 
+			popupText.text = shortText;
+		}
+		popupText.ForceMeshUpdate();
 	}
 
 	private IEnumerator FadeImagesTo(float alpha, float fadeTime)
@@ -110,4 +155,20 @@ public class Popups : MonoBehaviour
 		}
 		popupText.color = new Color(popupText.color.r, popupText.color.g, popupText.color.b, Mathf.SmoothStep(originalAlpha, alpha, 1));
 	}
+
+	private IEnumerator ScaleImageTo(float finalLineCount, float scaleTime)
+	{
+		float originalLineCount = lastLineCount;
+        float time = 0f;
+        while(time < scaleTime)
+		{
+			UpdateScale(Mathf.SmoothStep(originalLineCount, finalLineCount, time/scaleTime));
+            time += Time.deltaTime;
+            yield return null;
+        }
+
+		UpdateScale(finalLineCount);
+	}
+
+	
 }

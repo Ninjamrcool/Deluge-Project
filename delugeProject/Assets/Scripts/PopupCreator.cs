@@ -63,8 +63,8 @@ public class PopupCreator : MonoBehaviour
 			GameObject newPopup = Instantiate(popupPrefab, transform);
             RectTransform newPopupRect = newPopup.GetComponent<RectTransform>();
             newPopupRect.anchoredPosition = popupYear.popupsList[i].pointPosition;
-            newPopup.GetComponent<Popups>().SetDirection((int)popupYear.popupsList[i].pointDirection);
-            newPopup.GetComponent<Popups>().SetText(popupYear.popupsList[i].popupText);
+            newPopup.transform.GetChild(0).GetComponent<Popups>().SetDirection((int)popupYear.popupsList[i].pointDirection);
+            newPopup.transform.GetChild(0).GetComponent<Popups>().SetText(popupYear.popupsList[i].popupText);
 		}	
 	}
 
