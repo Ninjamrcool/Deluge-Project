@@ -3,7 +3,6 @@ using TMPro;
 using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.EventSystems;
-using System;
 
 public class Popups : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {

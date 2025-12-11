@@ -802,7 +802,7 @@ MonoBehaviour:
   - {fileID: 6505582783199002257}
   popupFadeTime: 1
   linesInPrefab: 5
-  linesRequiredToHover: 6
+  linesRequiredToHover: 5
   popupDirectionOffsets:
   - {x: 0, y: -115}
   - {x: 0, y: 115}

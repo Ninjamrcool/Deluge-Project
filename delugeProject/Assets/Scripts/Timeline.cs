@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using TMPro;
 
 public class Timeline : MonoBehaviour, IPointerDownHandler
 {
@@ -14,6 +15,7 @@ public class Timeline : MonoBehaviour, IPointerDownHandler
     [SerializeField] private float maxX;
     [SerializeField] private GameObject timelineValidYearPrefab;
     [SerializeField] private Image prussiaBorders;
+    [SerializeField] TMP_Text yearsText;
 
     [SerializeField] private RectTransform rectTransform;
     [SerializeField] private RectTransform parentRectTransform;
@@ -85,6 +87,16 @@ public class Timeline : MonoBehaviour, IPointerDownHandler
 
     private void UpdateTimelineYear(float year)
 	{
+        if ((float)((int)year) - year < 0.5f)
+		{
+			yearsText.text = "Jan. " + year.ToString();
+		}
+		else
+		{
+			yearsText.text = "June. " + year.ToString();
+		}
+        
+
         if (year > 1656f)
 		{
 			prussiaBorders.color = new Color(prussiaBorders.color.r, prussiaBorders.color.g, prussiaBorders.color.b, 1f);
