@@ -45,7 +45,17 @@ public class OverlayManagers : MonoBehaviour
         CopySplineData(morphIntoCopy, morphInto);
 
         //make sure splines have same amount of points
-        AddSplinePointsToTargetAmount(mainSpriteShape.spline, morphIntoCopy.GetPointCount());
+        int morphIntoMultiplier;
+        if(mainSpriteShape.spline.GetPointCount() < morphIntoCopy.GetPointCount() / 2)
+		{
+			AddSplinePointsToTargetAmount(mainSpriteShape.spline, morphIntoCopy.GetPointCount() / 2);
+            morphIntoMultiplier = 2;
+		}
+		else
+		{
+            AddSplinePointsToTargetAmount(mainSpriteShape.spline, morphIntoCopy.GetPointCount());
+            morphIntoMultiplier = 1;
+		}
         AddSplinePointsToTargetAmount(morphIntoCopy, mainSpriteShape.spline.GetPointCount());
 
         Spline originalSpline = new Spline();
@@ -54,9 +64,9 @@ public class OverlayManagers : MonoBehaviour
         float time = 0f;
         while(time < morphTime)
 		{
-            for (int i = 0; i < morphIntoCopy.GetPointCount(); i++)
+            for (int i = 0; i < mainSpriteShape.spline.GetPointCount(); i++)
 			{
-				Vector3 finalPosition = morphIntoCopy.GetPosition(i);
+				Vector3 finalPosition = morphIntoCopy.GetPosition(morphIntoMultiplier * i);
                 Vector3 originalPosition = originalSpline.GetPosition(i);
 
 				try
@@ -67,7 +77,7 @@ public class OverlayManagers : MonoBehaviour
 				{
 					//Points too close
                     mainSpriteShape.spline.RemovePointAt(i);
-                    morphIntoCopy.RemovePointAt(i); //removing this point might cause visual bugs, but itl fix after
+                    morphIntoCopy.RemovePointAt(morphIntoMultiplier * i); //removing this point might cause visual bugs, but itl fix after
                     i -= 1;
                     //Debug.Log("removed point: " + i);
 				}

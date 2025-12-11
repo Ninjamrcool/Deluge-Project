@@ -59,7 +59,7 @@ public class Timeline : MonoBehaviour, IPointerDownHandler
             {
                 Vector2 newPos;
                 RectTransformUtility.ScreenPointToLocalPointInRectangle(parentRectTransform, mousePosition.ReadValue<Vector2>(), Camera.main, out newPos);
-                rectTransform.anchoredPosition = new Vector2(newPos.x, rectTransform.anchoredPosition.y);
+                rectTransform.anchoredPosition = new Vector2(Mathf.Max(minX, Mathf.Min(newPos.x, maxX)), rectTransform.anchoredPosition.y);
             }
 			else
 			{
