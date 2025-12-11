@@ -41,7 +41,7 @@ public class PopupCreator : MonoBehaviour
 	{
         for (int i = 0; i < transform.childCount; i++)
 		{
-			transform.GetChild(i).gameObject.GetComponent<Popups>().FadeOutAndDestroy();
+			transform.GetChild(i).GetChild(0).gameObject.GetComponent<Popups>().FadeOutAndDestroy();
 		}
 
         for (int i = 0; i < popupYearList.Length; i++)

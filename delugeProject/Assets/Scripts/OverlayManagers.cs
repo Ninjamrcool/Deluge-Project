@@ -18,6 +18,7 @@ public class OverlayManagers : MonoBehaviour
     [SerializeField] private SpriteShapeRenderer mainSpriteRenderer;
     [SerializeField] private float morphTime;
     [SerializeField] private float maxAlpha;
+    [SerializeField] private int removeDetailPointsLimit = 75;
 
     private void Start()
     {
@@ -43,6 +44,16 @@ public class OverlayManagers : MonoBehaviour
 	{
         Spline morphIntoCopy = new Spline();
         CopySplineData(morphIntoCopy, morphInto);
+
+        //Remove some detail for complicated splines when moving
+        if (mainSpriteShape.spline.GetPointCount() > removeDetailPointsLimit)
+		{
+			RemoveSplinePointsToTargetAmount(mainSpriteShape.spline, (int)(mainSpriteShape.spline.GetPointCount() * 0.75f));
+		}
+        if (morphIntoCopy.GetPointCount() > removeDetailPointsLimit)
+		{
+			RemoveSplinePointsToTargetAmount(morphIntoCopy, (int)(morphIntoCopy.GetPointCount() * 0.75f));
+		}
 
         //make sure splines have same amount of points
         int morphIntoMultiplier;
@@ -112,6 +123,23 @@ public class OverlayManagers : MonoBehaviour
                 int randomIndex = Random.Range(0, spline.GetPointCount() - 1);
                 Vector3 midpoint = Vector3.Lerp(spline.GetPosition(randomIndex), spline.GetPosition(randomIndex + 1), 0.5f);
 			    spline.InsertPointAt(randomIndex + 1, midpoint);
+            }
+			catch
+			{
+                //Points too close
+                //Debug.Log("failed to add point");
+				continue;
+			}
+		}
+	}
+
+    private void RemoveSplinePointsToTargetAmount(Spline spline, int numPoints)
+	{
+		while (spline.GetPointCount() > numPoints)
+		{
+            try{
+                int randomIndex = Random.Range(0, spline.GetPointCount() - 1);
+			    spline.RemovePointAt(randomIndex);
             }
 			catch
 			{

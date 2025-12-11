@@ -82,7 +82,7 @@ public class Popups : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
 	public void FadeOutAndDestroy()
 	{
-		Destroy(gameObject, popupFadeTime);
+		Destroy(transform.parent.gameObject, popupFadeTime);
 		StopAllCoroutines();
 		StartCoroutine(FadeImagesTo(0f, popupFadeTime));
 	}
