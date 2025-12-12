@@ -87,13 +87,13 @@ public class Timeline : MonoBehaviour, IPointerDownHandler
 
     private void UpdateTimelineYear(float year)
 	{
-        if ((float)((int)year) - year < 0.5f)
+        if (year - Mathf.Floor(year) < 0.5f)
 		{
-			yearsText.text = "Jan. " + year.ToString();
+			yearsText.text = "Jan. " + Mathf.Floor(year).ToString();
 		}
 		else
 		{
-			yearsText.text = "June. " + year.ToString();
+			yearsText.text = "June. " + Mathf.Floor(year).ToString();
 		}
         
 
