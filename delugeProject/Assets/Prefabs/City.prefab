@@ -349,7 +349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 300b1b8fee91d394baa7a3645fbc6170, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Cities
-  maxScale: 1.425
+  maxScale: 1.4
   baseOrthographicSize: 8
   moveDownSubtext: -71.3
   subtextFadeTime: 1

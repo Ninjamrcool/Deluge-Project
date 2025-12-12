@@ -32839,24 +32839,43 @@ MonoBehaviour:
   - cityName: "Gda\u0144sk"
     citySubName: Danzig
     position: {x: -842.4, y: 175.2}
+    scale: 1
   - cityName: "Krak\xF3w"
     citySubName: 
     position: {x: -649, y: -359.1}
+    scale: 1
   - cityName: "Lw\xF3w"
     citySubName: Lviv
     position: {x: -290.3, y: -337}
+    scale: 1
   - cityName: Warsaw
     citySubName: 
     position: {x: -609, y: -70}
+    scale: 1.1
   - cityName: "Pozna\u0144"
     citySubName: 
     position: {x: -947.4, y: -90.2}
+    scale: 1
   - cityName: Wilno
     citySubName: Vilnius
     position: {x: -325.8, y: 321.3}
+    scale: 1.1
   - cityName: "Kij\xF3w"
     citySubName: Kyiv
     position: {x: 218.6, y: -113.9}
+    scale: 1
+  - cityName: Czestochowa
+    citySubName: 
+    position: {x: -736.6, y: -270}
+    scale: 0.7
+  - cityName: "Przemy\u015Bl"
+    citySubName: 
+    position: {x: -394.7, y: -362.1}
+    scale: 0.7
+  - cityName: Tykocin
+    citySubName: 
+    position: {x: -487.9, y: 90.5}
+    scale: 0.7
   cityPrefab: {fileID: 4738133474711269616, guid: 349740a9aa6d4084384dedf51b745c28, type: 3}
 --- !u!1 &1376868768
 GameObject:

@@ -9,6 +9,7 @@ public class CityCreator : MonoBehaviour
 		public string cityName;
         public string citySubName;
         public Vector2 position;
+        public float scale;
 	} 
 
     [SerializeField] private City[] cityList; 
@@ -20,6 +21,7 @@ public class CityCreator : MonoBehaviour
 		{
 			GameObject newCity = Instantiate(cityPrefab, transform);
             newCity.GetComponent<RectTransform>().anchoredPosition = cityList[i].position;
+            newCity.GetComponent<RectTransform>().localScale = Vector3.one * cityList[i].scale;
             newCity.GetComponent<Cities>().SetName(cityList[i].cityName);
             newCity.GetComponent<Cities>().SetSubName(cityList[i].citySubName);
 		}

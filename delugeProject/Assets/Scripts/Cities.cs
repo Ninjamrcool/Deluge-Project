@@ -12,9 +12,11 @@ public class Cities : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     [SerializeField] TMP_Text cityText;
     [SerializeField] TMP_Text citySubText;
     private Camera mainCamera;
+	private Vector3 baseScale;
 
     private void Start()
 	{
+		baseScale = transform.localScale;
 		mainCamera = Camera.main;
 
         mainCamera.GetComponent<CameraControls>().cameraZoomed += ScaleCity;
@@ -42,7 +44,7 @@ public class Cities : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
 	private void ScaleCity()
 	{
-		transform.localScale = Vector3.one * Mathf.Min(maxScale, mainCamera.orthographicSize / baseOrthographicSize);
+		transform.localScale = baseScale * Mathf.Min(maxScale, mainCamera.orthographicSize / baseOrthographicSize);
 	}
 
     //Called when city is created by CityCreator script
