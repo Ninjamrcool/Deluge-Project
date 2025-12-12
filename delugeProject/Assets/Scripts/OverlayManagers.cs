@@ -17,7 +17,6 @@ public class OverlayManagers : MonoBehaviour
     [SerializeField] private SpriteShapeController mainSpriteShape;
     [SerializeField] private SpriteShapeRenderer mainSpriteRenderer;
     [SerializeField] private float morphTime;
-    [SerializeField] private float maxAlpha;
     [SerializeField] private int removeDetailPointsLimit = 75;
 
     private void Start()
@@ -33,11 +32,11 @@ public class OverlayManagers : MonoBehaviour
 			{
                 StopAllCoroutines();
                 StartCoroutine(MorphMainSpriteShape(overlayYears[i].spriteShapeGameObject.GetComponent<SpriteShapeController>().spline));
-                StartCoroutine(FadeRendererTo(maxAlpha));
+                StartCoroutine(FadeRendererTo(overlayYears[i].spriteShapeGameObject.GetComponent<SpriteShapeRenderer>().color));
                 return;
 			}
 		}
-        StartCoroutine(FadeRendererTo(0f));
+        StartCoroutine(FadeRendererTo(new Color(mainSpriteRenderer.color.r, mainSpriteRenderer.color.g, mainSpriteRenderer.color.b, 0f)));
     }
 
     private IEnumerator MorphMainSpriteShape(Spline morphInto)
@@ -46,14 +45,17 @@ public class OverlayManagers : MonoBehaviour
         CopySplineData(morphIntoCopy, morphInto);
 
         //Remove some detail for complicated splines when moving
-        if (mainSpriteShape.spline.GetPointCount() > removeDetailPointsLimit)
-		{
-			RemoveSplinePointsToTargetAmount(mainSpriteShape.spline, (int)(mainSpriteShape.spline.GetPointCount() * 0.75f));
-		}
-        if (morphIntoCopy.GetPointCount() > removeDetailPointsLimit)
-		{
-			RemoveSplinePointsToTargetAmount(morphIntoCopy, (int)(morphIntoCopy.GetPointCount() * 0.75f));
-		}
+        if (Mathf.Abs(mainSpriteShape.spline.GetPointCount() - morphIntoCopy.GetPointCount()) > 5)
+        {
+            if (mainSpriteShape.spline.GetPointCount() > removeDetailPointsLimit)
+            {
+                RemoveSplinePointsToTargetAmount(mainSpriteShape.spline, (int)(mainSpriteShape.spline.GetPointCount() * 0.75f));
+            }
+            if (morphIntoCopy.GetPointCount() > removeDetailPointsLimit)
+            {
+                RemoveSplinePointsToTargetAmount(morphIntoCopy, (int)(morphIntoCopy.GetPointCount() * 0.75f));
+            }
+        }
 
         //make sure splines have same amount of points
         int morphIntoMultiplier;
@@ -150,17 +152,27 @@ public class OverlayManagers : MonoBehaviour
 		}
 	}
 
-    private IEnumerator FadeRendererTo(float alpha)
+    private IEnumerator FadeRendererTo(Color newColor)
 	{
         float time = 0f;
-        float originalAlpha = mainSpriteRenderer.color.a;
+        Color originalColor = mainSpriteRenderer.color;
         while(time < morphTime)
 		{
-            mainSpriteRenderer.color = new Color(mainSpriteRenderer.color.r, mainSpriteRenderer.color.g, mainSpriteRenderer.color.b, Mathf.SmoothStep(originalAlpha, alpha, time/morphTime));
+            mainSpriteRenderer.color = new Color(
+                Mathf.SmoothStep(originalColor.r, newColor.r, time/morphTime),
+                Mathf.SmoothStep(originalColor.g, newColor.g, time/morphTime),
+                Mathf.SmoothStep(originalColor.b, newColor.b, time/morphTime),
+                Mathf.SmoothStep(originalColor.a, newColor.a, time/morphTime)
+            );
             time += Time.deltaTime;
             yield return null;
         }
 
-        mainSpriteRenderer.color = new Color(mainSpriteRenderer.color.r, mainSpriteRenderer.color.g, mainSpriteRenderer.color.b, Mathf.SmoothStep(originalAlpha, alpha, time/morphTime));
+        mainSpriteRenderer.color = new Color(
+            Mathf.SmoothStep(originalColor.r, newColor.r, time/morphTime),
+            Mathf.SmoothStep(originalColor.g, newColor.g, time/morphTime),
+            Mathf.SmoothStep(originalColor.b, newColor.b, time/morphTime),
+            Mathf.SmoothStep(originalColor.a, newColor.a, time/morphTime)
+        );
 	}
 }
