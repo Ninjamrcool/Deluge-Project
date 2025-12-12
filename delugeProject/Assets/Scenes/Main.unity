@@ -21229,18 +21229,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CityCreator
   cityList:
   - cityName: "Gda\u0144sk"
+    citySubName: Danzig
     position: {x: -842.4, y: 175.2}
   - cityName: "Krak\xF3w"
+    citySubName: 
     position: {x: -649, y: -359.1}
   - cityName: "Lw\xF3w"
+    citySubName: Lviv
     position: {x: -290.3, y: -337}
   - cityName: Warsaw
+    citySubName: 
     position: {x: -609, y: -70}
   - cityName: "Pozna\u0144"
+    citySubName: 
     position: {x: -947.4, y: -90.2}
   - cityName: Wilno
+    citySubName: Vilnius
     position: {x: -325.8, y: 321.3}
   - cityName: "Kij\xF3w"
+    citySubName: Kyiv
     position: {x: 218.6, y: -113.9}
   cityPrefab: {fileID: 4738133474711269616, guid: 349740a9aa6d4084384dedf51b745c28, type: 3}
 --- !u!1 &1410207150
