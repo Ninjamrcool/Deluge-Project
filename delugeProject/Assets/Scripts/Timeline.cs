@@ -15,6 +15,7 @@ public class Timeline : MonoBehaviour, IPointerDownHandler
     [SerializeField] private float maxX;
     [SerializeField] private GameObject timelineValidYearPrefab;
     [SerializeField] private Image prussiaBorders;
+    [SerializeField] private Image finalNationalBorders;
     [SerializeField] TMP_Text yearsText;
 
     [SerializeField] private RectTransform rectTransform;
@@ -104,6 +105,15 @@ public class Timeline : MonoBehaviour, IPointerDownHandler
 		else
 		{
 			prussiaBorders.color = new Color(prussiaBorders.color.r, prussiaBorders.color.g, prussiaBorders.color.b, 0.6941176471f);
+		}
+
+        if (year >= 1667f)
+		{
+			finalNationalBorders.color = new Color(finalNationalBorders.color.r, finalNationalBorders.color.g, finalNationalBorders.color.b, 1f);
+		}
+		else
+		{
+			finalNationalBorders.color = new Color(finalNationalBorders.color.r, finalNationalBorders.color.g, finalNationalBorders.color.b, 0f);
 		}
 
         if (timelineUpdated != null)
