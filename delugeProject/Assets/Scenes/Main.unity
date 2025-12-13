@@ -15583,6 +15583,11 @@ MonoBehaviour:
         and sent back to Sweden or melted in a mint. (D)"
       pointPosition: {x: -604.8, y: -357.8}
       pointDirection: 3
+    - popupText: In Greater Poland Voivodeship, rich monasteries, colleges, offices,
+        libraries, and churches are plundered by the invading Swedes. Numerous cultural
+        artifacts are taken to Sweden, many of which remain there today. (G)
+      pointPosition: {x: -985.3, y: -90.5}
+      pointDirection: 2
   - year: 1656.5
     popupsList:
     - popupText: Polish resistance increases after Swedish looting, starting Guerilla
@@ -15664,6 +15669,11 @@ MonoBehaviour:
         caused 38% of households to be destroyed. (B)
       pointPosition: {x: -606, y: -419}
       pointDirection: 0
+    - popupText: "A group of nobles request that Krak\xF3w merchants be given tax
+        relief. They are completely unable to afford the taxes due to troops being
+        hosted in the city. (F)"
+      pointPosition: {x: -680.5, y: -357.9}
+      pointDirection: 2
   - year: 1661
     popupsList:
     - popupText: Peace is signed in 1660 and the war with Sweden ends. Poland-Lithuania
@@ -18844,7 +18854,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -8, y: 344}
+  m_AnchoredPosition: {x: -985.3, y: -90.5}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &423200896
@@ -44051,6 +44061,14 @@ MonoBehaviour:
   - text: "E - Frost, Robert I. After the Deluge: Poland-Lithuania and the Second
       Northern War, 1655\u20131660. Cambridge: Cambridge University Press, 2009."
     link: https://www.cambridge.org/core/books/after-the-deluge/95667360EB1C71CE1F7073E4D18BCD58
+  - text: 'F - Wyrobisz, Andrzej. Power and Towns in the Polish Gentry Commonwealth:
+      The Polish-Lithuanian State in the Sixteenth and Seventeenth Centuries. S.l.:
+      s.n., 1994.'
+    link: https://www.jstor.org/stable/657613
+  - text: "G - Kossarzecki, Krzysztof. Destruction and Robbery of Cultural Property
+      in Greater Poland during the Swedish Deluge of 1655\u20131660). Analecta. Studia
+      i Materia\u0142y z Dziej\xF3w Nauki 33, no. 1 (2024)"
+    link: 'https://www.ihnpan.pl/wp-content/uploads/2025/03/Analecta_2024_1_9-Kossarzecki.pdf '
 --- !u!1 &1256863226
 GameObject:
   m_ObjectHideFlags: 0
@@ -56893,7 +56911,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1481276837
 RectTransform:
   m_ObjectHideFlags: 0
