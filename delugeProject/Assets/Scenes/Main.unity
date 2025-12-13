@@ -14349,7 +14349,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -15515,6 +15515,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PopupCreator
   popupYearList:
+  - year: 1648
+    popupsList:
+    - popupText: Bohdan Khmelnytsky starts a Cossack uprising in Ukraine which quickly
+        gains momentum, defeating multiple Polish armies.
+      pointPosition: {x: 713.6, y: -320.9}
+      pointDirection: 0
   - year: 1649
     popupsList:
     - popupText: "Oct. 1648. Tatar and Cossack forces engage in a 10 day raid in
@@ -15524,6 +15530,78 @@ MonoBehaviour:
         in the area to avoid exacerbating the food situation. (A)"
       pointPosition: {x: -367.9, y: -407.4}
       pointDirection: 0
+  - year: 1654
+    popupsList:
+    - popupText: Jan. 1648. The Cossack Hetmanate pledges allegiance to the Russian
+        Tsar in exchange for military support. The Russian Tsardom joins the war.
+      pointPosition: {x: 259, y: -123}
+      pointDirection: 0
+  - year: 1656
+    popupsList:
+    - popupText: 'Sweden invades the Polish-Llthuanian Commonwealth from Pomerania
+        and their Baltic holdings, beginning the Swedish Deluge. '
+      pointPosition: {x: -1071, y: 124}
+      pointDirection: 1
+    - popupText: John Casimir, the king of Poland, flees the country after numerous
+        Swedish successes. Sweden occupies half of the country.
+      pointPosition: {x: -835.3, y: -340.8}
+      pointDirection: 0
+  - year: 1656.5
+    popupsList:
+    - popupText: Polish resistance increases after Swedish looting, starting Guerilla
+        warfare. John Casimir reenters the south of the country and organizes new
+        armies.
+      pointPosition: {x: -286, y: -368}
+      pointDirection: 0
+    - popupText: Brandenburg-Prussia joins the war on Sweden's side, after being
+        promissed territories in northern Poland.
+      pointPosition: {x: -1087, y: 40}
+      pointDirection: 2
+  - year: 1657
+    popupsList:
+    - popupText: 'Russia agrees to a truce with Poland after seeing Swedish success,
+        seeing them as a threat. Russia agrees to invade Sweden through the Baltics
+        and Finland. '
+      pointPosition: {x: -112, y: 755}
+      pointDirection: 1
+  - year: 1657.5
+    popupsList:
+    - popupText: The Danubian Principalities, being promised land in southern Poland
+        by Sweden, invade in late January.
+      pointPosition: {x: -438, y: -486}
+      pointDirection: 0
+  - year: 1658
+    popupsList:
+    - popupText: The Danubian Principalities abandon Sweden and make peace after
+        their army is surrounded and destroyed.
+      pointPosition: {x: -438, y: -486}
+      pointDirection: 0
+    - popupText: Brandenburg also leaves the war, with Poland agreeing to give them
+        Prussia and some border territories in exchange for military aid.
+      pointPosition: {x: -645, y: 228}
+      pointDirection: 1
+    - popupText: The Cossack Hetmanate switches allegiance from the Russian Tsardom.
+      pointPosition: {x: 248, y: -156}
+      pointDirection: 0
+  - year: 1659
+    popupsList:
+    - popupText: The truce between Poland-Lithuania and Russia ends, hostilities
+        resume.
+      pointPosition: {x: -73.1, y: 141.8}
+      pointDirection: 2
+  - year: 1661
+    popupsList:
+    - popupText: Peace is signed in 1660 and the war with Sweden ends. Poland-Lithuania
+        now soley fights against Russia.
+      pointPosition: {x: -1071, y: 456}
+      pointDirection: 3
+  - year: 1667
+    popupsList:
+    - popupText: "Poland and Russia sign the Treaty of Andrusovo, which ends hostilities
+        and cedes Smole\u0144sk, Kij\xF3w (Kyiv), and the east side of the Dnipro
+        river to Russia."
+      pointPosition: {x: -71, y: 675}
+      pointDirection: 1
   popupPrefab: {fileID: 7387444174819257473, guid: d77639279893f094195a42191f849e02, type: 3}
   timelineScript: {fileID: 694079885}
 --- !u!1 &372767046
@@ -18654,6 +18732,81 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1080, y: 606.9422}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &423200894
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 423200895}
+  - component: {fileID: 423200897}
+  - component: {fileID: 423200896}
+  m_Layer: 5
+  m_Name: Marker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &423200895
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 423200894}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1518969114}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -1071, y: 456}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &423200896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 423200894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &423200897
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 423200894}
+  m_CullTransparentMesh: 1
 --- !u!1 &431870465
 GameObject:
   m_ObjectHideFlags: 0
@@ -59555,6 +59708,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 368158125}
+  - {fileID: 423200895}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}

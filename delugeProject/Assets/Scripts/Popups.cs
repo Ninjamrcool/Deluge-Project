@@ -98,7 +98,14 @@ public class Popups : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 	public void UpdateScale(float lineCount) //float to allow interpolation 
 	{
 		lastLineCount = lineCount;
-		popupBody.localScale = new Vector3(popupBody.localScale.x, (popupBodyStartingYScale / (linesInPrefab - 1)) * (lineCount - 1), popupBody.localScale.z);
+		if (lineCount < 4)
+		{
+			popupBody.localScale = new Vector3(popupBody.localScale.x, (popupBodyStartingYScale / (linesInPrefab - 2)) * (lineCount - 1), popupBody.localScale.z);
+		}
+		else
+		{
+			popupBody.localScale = new Vector3(popupBody.localScale.x, (popupBodyStartingYScale / (linesInPrefab - 1)) * (lineCount - 1), popupBody.localScale.z);
+		}
 		float changeInHeight = popupBodyHeight * (popupBody.localScale.y - popupBodyStartingYScale);
 
 	
