@@ -24,6 +24,7 @@ public class ReferencesUI : MonoBehaviour
 	{
 		escapeUI = InputSystem.actions.FindAction("EscapeUI");
 
+        referencesUIContainer.SetActive(true);
         for (int i = 0; i < references.Length; i++)
 		{
 			GameObject reference = Instantiate(referenceTextPrefab, referencesTextContainer.transform);
@@ -33,6 +34,7 @@ public class ReferencesUI : MonoBehaviour
             reference.GetComponent<RectTransform>().sizeDelta = new Vector2(reference.GetComponent<RectTransform>().sizeDelta.x, lineCount * 33f);
             reference.GetComponent<ReferenceText>().SetLink(references[i].link);
 		}
+        referencesUIContainer.SetActive(false);
 	}
 
     private void Update()

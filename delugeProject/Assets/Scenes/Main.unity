@@ -15557,6 +15557,11 @@ MonoBehaviour:
         promissed territories in northern Poland.
       pointPosition: {x: -1087, y: 40}
       pointDirection: 2
+    - popupText: Swedish transport boats are loaded with loot from Warsaw, including
+        fine baroque sculptures made from marble. Some boats, completely overloaded
+        with the amount of loot, sink to the bottom of the river. (B)
+      pointPosition: {x: -590, y: -71}
+      pointDirection: 3
   - year: 1657
     popupsList:
     - popupText: 'Russia agrees to a truce with Poland after seeing Swedish success,
@@ -15564,6 +15569,25 @@ MonoBehaviour:
         and Finland. '
       pointPosition: {x: -112, y: 755}
       pointDirection: 1
+    - popupText: "The French ambassador to Poland notes: \u201CThe Poles were very
+        bitter about the destruction of castles in various parts of their country,
+        as well as about the rumour that Charles Gustav ordered the destruction of
+        the Warsaw Royal Palaces and gardens, and also the pillaging and burning
+        of the town.\u201D (B)"
+      pointPosition: {x: -590, y: -81}
+      pointDirection: 3
+    - popupText: "The Polish population, after enduring the suffering inflicted by
+        the Swedes, are angry and seek revenge:\n\"At night when the Swedes were
+        asleep [the rebels] entered [Wielu\u0144] and quietly killed the guards at
+        the gate. They opened it and let their troops in. There were so many Swedes
+        in the town that they would be enough to repel the Poles if only they could
+        take up arms and gather in one place. But the Poles rapidly occupied the
+        streets and, raising a terrible cry, killed everyone they met outside so
+        that everybody sought refuge. When the daytime came, the Poles dismounted,
+        broke into the homes and murdered all the German-speaking inhabitants, making
+        no difference between soldiers, craftsmen, or travellers.\" (B)"
+      pointPosition: {x: -780.5, y: -227.1}
+      pointDirection: 0
   - year: 1657.5
     popupsList:
     - popupText: The Danubian Principalities, being promised land in southern Poland
@@ -15589,6 +15613,10 @@ MonoBehaviour:
         resume.
       pointPosition: {x: -73.1, y: 141.8}
       pointDirection: 2
+    - popupText: In the of Lesser Poland Voivodeship, Swedish and Transylvanian invasions
+        caused 38% of households to be destroyed. (B)
+      pointPosition: {x: -606, y: -419}
+      pointDirection: 0
   - year: 1661
     popupsList:
     - popupText: Peace is signed in 1660 and the war with Sweden ends. Poland-Lithuania
@@ -18766,7 +18794,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1071, y: 456}
+  m_AnchoredPosition: {x: -609, y: -71}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &423200896
@@ -43827,6 +43855,9 @@ MonoBehaviour:
       Material Destruction and Demographic Losses in the Land of Przemys\u0301l,
       Warsaw:Wydawnictwo Naukowe \u201CSemper\u201D, 2012."
     link: https://www.academia.edu/9994934/THE_TATAR_COSSACK_INVASION_OF_1648_MILITARY_ACTIONS_MATERIAL_DESTRUCTION_AND_DEMOGRAPHIC_LOSSES_IN_THE_LAND_OF_PRZEMY%C5%9AL
+  - text: 'B - Krawczuk, Wojciech. Samuel Pufendorf and Some Stories of the Northern
+      War 1655-1660. Krakow: Jagiellonian University Press, 2014. '
+    link: https://resolve.cambridge.org/core/books/samuel-pufendorf-and-some-stories-of-the-northern-war-1655-1660/193B3C61A7F5DE34BCA1DD560CBB3BD7
 --- !u!1 &1256863226
 GameObject:
   m_ObjectHideFlags: 0
