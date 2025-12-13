@@ -16,6 +16,7 @@ public class ReferencesUI : MonoBehaviour
     [SerializeField] GameObject referencesUIContainer;
     [SerializeField] GameObject referencesTextContainer;
     [SerializeField] GameObject referenceTextPrefab;
+    [SerializeField] GameObject creditsPrefab;
     [SerializeField] Reference[] references;
 
     private InputAction escapeUI;
@@ -34,6 +35,7 @@ public class ReferencesUI : MonoBehaviour
             reference.GetComponent<RectTransform>().sizeDelta = new Vector2(reference.GetComponent<RectTransform>().sizeDelta.x, lineCount * 33f);
             reference.GetComponent<ReferenceText>().SetLink(references[i].link);
 		}
+        Instantiate(creditsPrefab, referencesTextContainer.transform);
         referencesUIContainer.SetActive(false);
 	}
 
