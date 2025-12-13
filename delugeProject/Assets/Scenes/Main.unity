@@ -6817,7 +6817,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Military deaths and injuries were also off the scale compared to other
     wars fought by the Polish-Lithuanian commonwealth. This caused immense strain
-    on the state. (I)
+    on the state. (6)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: aaf7d5e1511d7e440bf8a024ed083de2, type: 2}
   m_sharedMaterial: {fileID: 7416454782861514463, guid: aaf7d5e1511d7e440bf8a024ed083de2, type: 2}
@@ -6883,7 +6883,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -255.35245, w: 0}
+  m_margin: {x: 0, y: 0, z: -261.254, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -7105,7 +7105,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: Poland-Lithuania's economy suffered. GDP per capita estimates show it dropping
-    by 37.5%, a drop on the scale of the Great Depression. (I)
+    by 37.5%, a drop on the scale of the Great Depression. (6)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: aaf7d5e1511d7e440bf8a024ed083de2, type: 2}
   m_sharedMaterial: {fileID: 7416454782861514463, guid: aaf7d5e1511d7e440bf8a024ed083de2, type: 2}
@@ -15938,7 +15938,7 @@ MonoBehaviour:
       pointDirection: 0
     - popupText: Poland-Lithuania goes through a slight economic downturn due to
         disruption to the Baltic trade caused by the Thirty Years War. This disruption
-        badly impacted the incomes of many nobles. (E)
+        badly impacted the incomes of many nobles. (2)
       pointPosition: {x: -819, y: 305}
       pointDirection: 2
   - year: 1649
@@ -15947,18 +15947,18 @@ MonoBehaviour:
         Przemys\u0301l and Lw\xF3w region, causing 65% of inns, 64% of farms, 54%
         of mills, and 49% of villages to be destroyed, leaving 30,000 homeless and
         taking over 10,000 captives. Polish soldiers are ordered to stop wintering
-        in the area to avoid exacerbating the food situation. (A)"
+        in the area to avoid exacerbating the food situation. (3)"
       pointPosition: {x: -367.9, y: -407.4}
       pointDirection: 0
     - popupText: "The death of Wladyslaw IV, the former Polish king, in May, greatly
         reduces the Commonwealth\u2019s ability to coordinate a military response
-        against the uprising. (E)"
+        against the uprising. (2)"
       pointPosition: {x: -608, y: -89}
       pointDirection: 0
   - year: 1652
     popupsList:
     - popupText: "A plague outbreak spreads throughout Krak\xF3w from 1651-1652.
-        (D)"
+        (11)"
       pointPosition: {x: -650, y: -400}
       pointDirection: 0
   - year: 1654
@@ -15973,10 +15973,10 @@ MonoBehaviour:
         by waves of refugees, lurid and exaggerated reports of atrocities spread:\r\n\u2018The
         Muscovites are subjecting Polish cities to a tyranny the likes of which cannot
         be found in any story: they have put everything to the torch within seventy
-        miles of the border\r\nand they have put everyone over sixteen to the sword,
+        miles of the border and they have put everyone over sixteen to the sword,
         while all those under that age have been taken to Muscovy... where they have
-        been displayed to the Russians and pressed into\r\nperpetual slavery.\u2019\u201D
-        (E)"
+        been displayed to the Russians and pressed into perpetual slavery.\u2019\u201D
+        (2)"
       pointPosition: {x: -8, y: 344}
       pointDirection: 2
   - year: 1656
@@ -15994,12 +15994,12 @@ MonoBehaviour:
         forgetting anyone\u2019s property.\r\nSweden then briefly sieges and occupies
         Krak\xF3w. Around 6,000 Polish soldiers and civilians flee the city. New
         taxes are imposed. Valuables are confiscated in churches and monasteries
-        and sent back to Sweden or melted in a mint. (D)"
+        and sent back to Sweden or melted in a mint. (11)"
       pointPosition: {x: -604.8, y: -357.8}
       pointDirection: 3
     - popupText: In Greater Poland Voivodeship, rich monasteries, colleges, offices,
         libraries, and churches are plundered by the invading Swedes. Numerous cultural
-        artifacts are taken to Sweden, many of which remain there today. (G)
+        artifacts are taken to Sweden, many of which remain there today. (4)
       pointPosition: {x: -985.3, y: -90.5}
       pointDirection: 2
   - year: 1656.5
@@ -16015,7 +16015,7 @@ MonoBehaviour:
       pointDirection: 2
     - popupText: Swedish transport boats are loaded with loot from Warsaw, including
         fine baroque sculptures made from marble. Some boats, completely overloaded
-        with the amount of loot, sink to the bottom of the river. (B)
+        with the amount of loot, sink to the bottom of the river. (5)
       pointPosition: {x: -590, y: -71}
       pointDirection: 3
   - year: 1657
@@ -16029,7 +16029,7 @@ MonoBehaviour:
         bitter about the destruction of castles in various parts of their country,
         as well as about the rumour that Charles Gustav ordered the destruction of
         the Warsaw Royal Palaces and gardens, and also the pillaging and burning
-        of the town.\u201D (B)"
+        of the town.\u201D (5)"
       pointPosition: {x: -590, y: -81}
       pointDirection: 3
     - popupText: "The Polish population, after enduring the suffering inflicted by
@@ -16041,7 +16041,7 @@ MonoBehaviour:
         streets and, raising a terrible cry, killed everyone they met outside so
         that everybody sought refuge. When the daytime came, the Poles dismounted,
         broke into the homes and murdered all the German-speaking inhabitants, making
-        no difference between soldiers, craftsmen, or travellers.\" (B)"
+        no difference between soldiers, craftsmen, or travellers.\" (5)"
       pointPosition: {x: -780.5, y: -227.1}
       pointDirection: 0
   - year: 1657.5
@@ -16053,7 +16053,7 @@ MonoBehaviour:
     - popupText: The city of Tykocin has 920 residents remaining, down from around
         3,100 before the war, a loss of 72%. This was caused by both armies passing
         between Lithuania and Poland burdening the local population, and lengthy
-        occupation by foreign forces. (C)
+        occupation by foreign forces. (8)
       pointPosition: {x: -453, y: 91}
       pointDirection: 3
   - year: 1658
@@ -16070,11 +16070,11 @@ MonoBehaviour:
       pointPosition: {x: 248, y: -156}
       pointDirection: 0
     - popupText: Aug. 30, 1657. Swedish troops leave Krakow. The two year occupation
-        ends. (D)
+        ends. (11)
       pointPosition: {x: -680.5, y: -357.9}
       pointDirection: 2
     - popupText: Due to the Swedish invasion, Warsaw's population has fallen by 90%,
-        from 20,000 to 2,000. The entire city has been razed to the ground. (K)
+        from 20,000 to 2,000. The entire city has been razed to the ground. (9)
       pointPosition: {x: -574, y: -73}
       pointDirection: 3
   - year: 1659
@@ -16084,12 +16084,12 @@ MonoBehaviour:
       pointPosition: {x: -73.1, y: 141.8}
       pointDirection: 2
     - popupText: In the of Lesser Poland Voivodeship, Swedish and Transylvanian invasions
-        caused 38% of households to be destroyed. (B)
+        caused 38% of households to be destroyed. (5)
       pointPosition: {x: -606, y: -419}
       pointDirection: 0
     - popupText: "A group of nobles request that Krak\xF3w merchants be given tax
         relief. They are completely unable to afford the taxes due to troops being
-        hosted in the city. (F)"
+        hosted in the city. (10)"
       pointPosition: {x: -680.5, y: -357.9}
       pointDirection: 2
     - popupText: "Poland-Lithuania sends an army abroad through Swedish Pomerania
@@ -16097,7 +16097,7 @@ MonoBehaviour:
         the army was to have gone deeper into the Danish kingdom, the Commandant
         thought to halt at the outermost edge for the winter, simply to eat up more
         Swedish bread than Danish. And so we did, all winter long; our scouts romped
-        through their villages, avenging the wrongs done by those Swedes.\u201D (H)"
+        through their villages, avenging the wrongs done by those Swedes.\u201D (7)"
       pointPosition: {x: -1234, y: 107}
       pointDirection: 0
   - year: 1661
@@ -16111,7 +16111,7 @@ MonoBehaviour:
         already been requisitioned, and the rest \u2014 whoever still had any \u2014
         taken deep into the woods and kept there both winter and summer. So we were
         starved for meat after living for several months off garden vegetables alone,
-        mostly on baked beets.\u201D (H)"
+        mostly on baked beets.\u201D (7)"
       pointPosition: {x: 0, y: 312}
       pointDirection: 0
   - year: 1667
@@ -20256,7 +20256,7 @@ MonoBehaviour:
   m_text: '"The Commonwealth lost over a third of its population. The economy was
     totally ruined, with a decreased population, burnt-out cities, towns and countless
     villages, ruined agriculture, trade and industry and a starving population."
-    (K)'
+    (9)'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: aaf7d5e1511d7e440bf8a024ed083de2, type: 2}
   m_sharedMaterial: {fileID: 7416454782861514463, guid: aaf7d5e1511d7e440bf8a024ed083de2, type: 2}
@@ -44834,47 +44834,47 @@ MonoBehaviour:
   referenceTextPrefab: {fileID: 5206267820753155020, guid: 112f7893b82544f4aa52d923575e03f7, type: 3}
   creditsPrefab: {fileID: 5689622426337966478, guid: 69a5cdd9d5d75a6478a462e318dfe71c, type: 3}
   references:
-  - text: "A - Gliwa, Andrzej. The Tatar-Cossack Invasion of 1648: Military Actions,
+  - text: "1 - CALLATA\u0178, FRAN\xC7OIS de. \u201CCoin Deposits and Civil Wars
+      in a Long-Term Perspective (c.400 BC\u20131950 AD).\u201D The Numismatic Chronicle
+      (1966-) 177 (2017): 313\u201338."
+    link: https://www.jstor.org/stable/26637388
+  - text: "2 - Frost, Robert I. After the Deluge: Poland-Lithuania and the Second
+      Northern War, 1655\u20131660. Cambridge: Cambridge University Press, 2009."
+    link: https://www.cambridge.org/core/books/after-the-deluge/95667360EB1C71CE1F7073E4D18BCD58
+  - text: "3 - Gliwa, Andrzej. The Tatar-Cossack Invasion of 1648: Military Actions,
       Material Destruction and Demographic Losses in the Land of Przemys\u0301l,
       Warsaw:Wydawnictwo Naukowe \u201CSemper\u201D, 2012."
     link: https://www.academia.edu/9994934/THE_TATAR_COSSACK_INVASION_OF_1648_MILITARY_ACTIONS_MATERIAL_DESTRUCTION_AND_DEMOGRAPHIC_LOSSES_IN_THE_LAND_OF_PRZEMY%C5%9AL
-  - text: 'B - Krawczuk, Wojciech. Samuel Pufendorf and Some Stories of the Northern
+  - text: "4 - Kossarzecki, Krzysztof. Destruction and Robbery of Cultural Property
+      in Greater Poland during the Swedish Deluge of 1655\u20131660). Analecta. Studia
+      i Materia\u0142y z Dziej\xF3w Nauki 33, no. 1 (2024)"
+    link: 'https://www.ihnpan.pl/wp-content/uploads/2025/03/Analecta_2024_1_9-Kossarzecki.pdf '
+  - text: '5 - Krawczuk, Wojciech. Samuel Pufendorf and Some Stories of the Northern
       War 1655-1660. Krakow: Jagiellonian University Press, 2014. '
     link: https://resolve.cambridge.org/core/books/samuel-pufendorf-and-some-stories-of-the-northern-war-1655-1660/193B3C61A7F5DE34BCA1DD560CBB3BD7
-  - text: "C - Sierba, Micha; \u201CDemographic Situation of Tykocin in 1661-1676
+  - text: "6 - Malinowski, Mikolaj. \u201CFreedom and Decline: Polish State Formation
+      and Rye Market Disintegration, 1500-1772,\u201D November 3, 2014."
+    link: https://www.academia.edu/9107881/Freedom_and_decline_Polish_state_formation_and_rye_market_disintegration_1500_1772
+  - text: '7 - Pasek, Jan Chryzostom. Memoirs of the Polish Baroque: The Writings
+      of Jan Chryzostom Pasek, a Squire of the Commonwealth of Poland and Lithuania.
+      S.l.: University of California Press, 1976.'
+    link: https://books.google.com/books?id=UXOyzpp6YJoC
+  - text: "8 - Sierba, Micha; \u201CDemographic Situation of Tykocin in 1661-1676
       Based on Tax Registers.\u201D Scripta Historica, No. 25, 2020."
     link: 'https://www.academia.edu/43710694/DEMOGRAPHIC_SITUATION_OF_TYKOCIN_IN_1661_1676_BASED_ON_TAX_REGISTERS. '
-  - text: "D - Zinkiewicz, Jacek. \u201CAttitudes of the Inhabitants of Krakow towards
+  - text: '9 - Szulakowska, Urszula. Renaissance and Baroque Art and Culture in the
+      Eastern Polish-Lithuanian Commonwealth: 1506-1696. Newcastle upon Tyne: Cambridge
+      Scholars Publishing, 2018.'
+    link: https://books.google.com/books?id=yFmGDwAAQBAJ&pg=PA55
+  - text: '10 - Wyrobisz, Andrzej. Power and Towns in the Polish Gentry Commonwealth:
+      The Polish-Lithuanian State in the Sixteenth and Seventeenth Centuries. S.l.:
+      s.n., 1994.'
+    link: https://www.jstor.org/stable/657613
+  - text: "11 - Zinkiewicz, Jacek. \u201CAttitudes of the Inhabitants of Krakow towards
       the Swedish Occupation of the City in the Years 1655\u20131657.\u201D M\u011Bsta
       dob\xFDvan\xE1, dobyt\xE1 a okupovan\xE1: Kontexty a d\u016Fsledky ne\xFAsp\u011B\u0161n\xE9
       obrany m\u011Bst od st\u0159edov\u011Bku do 20. stolet\xED, 2022."
     link: https://www.academia.edu/106505548/ATTITUDES_OF_THE_INHABITANTS_OF_KRAKOW_TOWARDS_THE_SWEDISH_OCCUPATION_OF_THE_CITY_IN_THE_YEARS_1655_1657
-  - text: "E - Frost, Robert I. After the Deluge: Poland-Lithuania and the Second
-      Northern War, 1655\u20131660. Cambridge: Cambridge University Press, 2009."
-    link: https://www.cambridge.org/core/books/after-the-deluge/95667360EB1C71CE1F7073E4D18BCD58
-  - text: 'F - Wyrobisz, Andrzej. Power and Towns in the Polish Gentry Commonwealth:
-      The Polish-Lithuanian State in the Sixteenth and Seventeenth Centuries. S.l.:
-      s.n., 1994.'
-    link: https://www.jstor.org/stable/657613
-  - text: "G - Kossarzecki, Krzysztof. Destruction and Robbery of Cultural Property
-      in Greater Poland during the Swedish Deluge of 1655\u20131660). Analecta. Studia
-      i Materia\u0142y z Dziej\xF3w Nauki 33, no. 1 (2024)"
-    link: 'https://www.ihnpan.pl/wp-content/uploads/2025/03/Analecta_2024_1_9-Kossarzecki.pdf '
-  - text: 'H - Pasek, Jan Chryzostom. Memoirs of the Polish Baroque: The Writings
-      of Jan Chryzostom Pasek, a Squire of the Commonwealth of Poland and Lithuania.
-      S.l.: University of California Press, 1976.'
-    link: https://books.google.com/books?id=UXOyzpp6YJoC
-  - text: "I - Malinowski, Mikolaj. \u201CFreedom and Decline: Polish State Formation
-      and Rye Market Disintegration, 1500-1772,\u201D November 3, 2014."
-    link: https://www.academia.edu/9107881/Freedom_and_decline_Polish_state_formation_and_rye_market_disintegration_1500_1772
-  - text: "J - CALLATA\u0178, FRAN\xC7OIS de. \u201CCoin Deposits and Civil Wars
-      in a Long-Term Perspective (c.400 BC\u20131950 AD).\u201D The Numismatic Chronicle
-      (1966-) 177 (2017): 313\u201338."
-    link: https://www.jstor.org/stable/26637388
-  - text: 'K - Szulakowska, Urszula. Renaissance and Baroque Art and Culture in the
-      Eastern Polish-Lithuanian Commonwealth: 1506-1696. Newcastle upon Tyne: Cambridge
-      Scholars Publishing, 2018.'
-    link: https://books.google.com/books?id=yFmGDwAAQBAJ&pg=PA55
 --- !u!1 &1256863226
 GameObject:
   m_ObjectHideFlags: 0
@@ -92158,7 +92158,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: These effects were felt by the common folk. Buried valuables discovered
     spike during this period, suggesting countrywide economic instability and a fear
-    of thieves and looters. (J)
+    of thieves and looters. (1)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: aaf7d5e1511d7e440bf8a024ed083de2, type: 2}
   m_sharedMaterial: {fileID: 7416454782861514463, guid: aaf7d5e1511d7e440bf8a024ed083de2, type: 2}
@@ -92224,7 +92224,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -288.8003, w: 0}
+  m_margin: {x: 0, y: 0, z: -293.7183, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
