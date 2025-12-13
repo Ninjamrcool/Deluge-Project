@@ -18,6 +18,9 @@ public class Timeline : MonoBehaviour, IPointerDownHandler
     [SerializeField] private Image finalNationalBorders;
     [SerializeField] TMP_Text yearsText;
 
+    [SerializeField] private GameObject timelineEndPage1;
+    [SerializeField] private GameObject timelineEndPage2;
+
     [SerializeField] private RectTransform rectTransform;
     [SerializeField] private RectTransform parentRectTransform;
     [SerializeField] private RectTransform timelineYearsFolder;
@@ -88,7 +91,11 @@ public class Timeline : MonoBehaviour, IPointerDownHandler
 
     private void UpdateTimelineYear(float year)
 	{
-        if (year - Mathf.Floor(year) < 0.5f)
+        if (year >= 1668)
+		{
+			yearsText.text = " ";
+		}
+        else if (year - Mathf.Floor(year) < 0.5f)
 		{
 			yearsText.text = "Jan. " + Mathf.Floor(year).ToString();
 		}
@@ -115,6 +122,24 @@ public class Timeline : MonoBehaviour, IPointerDownHandler
 		{
 			finalNationalBorders.color = new Color(finalNationalBorders.color.r, finalNationalBorders.color.g, finalNationalBorders.color.b, 0f);
 		}
+
+        if (year == 1668)
+        {
+            timelineEndPage1.SetActive(true);
+        }
+        else
+        {
+            timelineEndPage1.SetActive(false);
+        }
+
+        if (year == 1669)
+        {
+            timelineEndPage2.SetActive(true);
+        }
+        else
+        {
+            timelineEndPage2.SetActive(false);
+        }
 
         if (timelineUpdated != null)
         {
