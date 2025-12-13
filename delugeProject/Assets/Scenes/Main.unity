@@ -15594,6 +15594,12 @@ MonoBehaviour:
         by Sweden, invade in late January.
       pointPosition: {x: -438, y: -486}
       pointDirection: 0
+    - popupText: The city of Tykocin has 920 residents remaining, down from around
+        3,100 before the war, a loss of 72%. This was caused by both armies passing
+        between Lithuania and Poland burdening the local population, and lengthy
+        occupation by foreign forces. (C)
+      pointPosition: {x: -453, y: 91}
+      pointDirection: 3
   - year: 1658
     popupsList:
     - popupText: The Danubian Principalities abandon Sweden and make peace after
@@ -18794,7 +18800,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -609, y: -71}
+  m_AnchoredPosition: {x: -453, y: 91}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &423200896
@@ -43858,6 +43864,9 @@ MonoBehaviour:
   - text: 'B - Krawczuk, Wojciech. Samuel Pufendorf and Some Stories of the Northern
       War 1655-1660. Krakow: Jagiellonian University Press, 2014. '
     link: https://resolve.cambridge.org/core/books/samuel-pufendorf-and-some-stories-of-the-northern-war-1655-1660/193B3C61A7F5DE34BCA1DD560CBB3BD7
+  - text: "C - Sierba, Micha; \u201CDemographic Situation of Tykocin in 1661-1676
+      Based on Tax Registers.\u201D Scripta Historica, No. 25, 2020."
+    link: 'https://www.academia.edu/43710694/DEMOGRAPHIC_SITUATION_OF_TYKOCIN_IN_1661_1676_BASED_ON_TAX_REGISTERS. '
 --- !u!1 &1256863226
 GameObject:
   m_ObjectHideFlags: 0
