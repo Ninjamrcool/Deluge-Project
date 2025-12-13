@@ -15522,6 +15522,11 @@ MonoBehaviour:
         gains momentum, defeating multiple Polish armies.
       pointPosition: {x: 713.6, y: -320.9}
       pointDirection: 0
+    - popupText: Poland-Lithuania goes through a slight economic downturn due to
+        disruption to the Baltic trade caused by the Thirty Years War. This disruption
+        badly impacted the incomes of many nobles. (E)
+      pointPosition: {x: -819, y: 305}
+      pointDirection: 2
   - year: 1649
     popupsList:
     - popupText: "Oct. 1648. Tatar and Cossack forces engage in a 10 day raid in
@@ -15530,6 +15535,11 @@ MonoBehaviour:
         taking over 10,000 captives. Polish soldiers are ordered to stop wintering
         in the area to avoid exacerbating the food situation. (A)"
       pointPosition: {x: -367.9, y: -407.4}
+      pointDirection: 0
+    - popupText: "The death of Wladyslaw IV, the former Polish king, in May, greatly
+        reduces the Commonwealth\u2019s ability to coordinate a military response
+        against the uprising. (E)"
+      pointPosition: {x: -608, y: -89}
       pointDirection: 0
   - year: 1652
     popupsList:
@@ -15543,6 +15553,18 @@ MonoBehaviour:
         Tsar in exchange for military support. The Russian Tsardom joins the war.
       pointPosition: {x: 259, y: -123}
       pointDirection: 0
+  - year: 1655.5
+    popupsList:
+    - popupText: "\u201CAs the Muscovite armies swept through Lithuania, preceded
+        by waves of refugees, lurid and exaggerated reports of atrocities spread:\r\n\u2018The
+        Muscovites are subjecting Polish cities to a tyranny the likes of which cannot
+        be found in any story: they have put everything to the torch within seventy
+        miles of the border\r\nand they have put everyone over sixteen to the sword,
+        while all those under that age have been taken to Muscovy... where they have
+        been displayed to the Russians and pressed into\r\nperpetual slavery.\u2019\u201D
+        (E)"
+      pointPosition: {x: -8, y: 344}
+      pointDirection: 2
   - year: 1656
     popupsList:
     - popupText: 'Sweden invades the Polish-Llthuanian Commonwealth from Pomerania
@@ -18822,7 +18844,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -680.5, y: -357.9}
+  m_AnchoredPosition: {x: -8, y: 344}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &423200896
@@ -44026,6 +44048,9 @@ MonoBehaviour:
       dob\xFDvan\xE1, dobyt\xE1 a okupovan\xE1: Kontexty a d\u016Fsledky ne\xFAsp\u011B\u0161n\xE9
       obrany m\u011Bst od st\u0159edov\u011Bku do 20. stolet\xED, 2022."
     link: https://www.academia.edu/106505548/ATTITUDES_OF_THE_INHABITANTS_OF_KRAKOW_TOWARDS_THE_SWEDISH_OCCUPATION_OF_THE_CITY_IN_THE_YEARS_1655_1657
+  - text: "E - Frost, Robert I. After the Deluge: Poland-Lithuania and the Second
+      Northern War, 1655\u20131660. Cambridge: Cambridge University Press, 2009."
+    link: https://www.cambridge.org/core/books/after-the-deluge/95667360EB1C71CE1F7073E4D18BCD58
 --- !u!1 &1256863226
 GameObject:
   m_ObjectHideFlags: 0
@@ -56868,7 +56893,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1481276837
 RectTransform:
   m_ObjectHideFlags: 0
