@@ -15674,12 +15674,28 @@ MonoBehaviour:
         hosted in the city. (F)"
       pointPosition: {x: -680.5, y: -357.9}
       pointDirection: 2
+    - popupText: "Poland-Lithuania sends an army abroad through Swedish Pomerania
+        to assist Denmark against Sweden. A soldier on the way writes:\n\u201CThough
+        the army was to have gone deeper into the Danish kingdom, the Commandant
+        thought to halt at the outermost edge for the winter, simply to eat up more
+        Swedish bread than Danish. And so we did, all winter long; our scouts romped
+        through their villages, avenging the wrongs done by those Swedes.\u201D (H)"
+      pointPosition: {x: -1234, y: 107}
+      pointDirection: 0
   - year: 1661
     popupsList:
     - popupText: Peace is signed in 1660 and the war with Sweden ends. Poland-Lithuania
         now soley fights against Russia.
       pointPosition: {x: -1071, y: 456}
       pointDirection: 3
+    - popupText: "A Polish soldier on the food conditions near the frontlines:\n\u201CMeat
+        was very hard to get near the Muscovite border, much of the cattle having
+        already been requisitioned, and the rest \u2014 whoever still had any \u2014
+        taken deep into the woods and kept there both winter and summer. So we were
+        starved for meat after living for several months off garden vegetables alone,
+        mostly on baked beets.\u201D (H)"
+      pointPosition: {x: 0, y: 312}
+      pointDirection: 0
   - year: 1667
     popupsList:
     - popupText: "Poland and Russia sign the Treaty of Andrusovo, which ends hostilities
@@ -18854,7 +18870,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -985.3, y: -90.5}
+  m_AnchoredPosition: {x: -1234, y: 107}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &423200896
@@ -44069,6 +44085,10 @@ MonoBehaviour:
       in Greater Poland during the Swedish Deluge of 1655\u20131660). Analecta. Studia
       i Materia\u0142y z Dziej\xF3w Nauki 33, no. 1 (2024)"
     link: 'https://www.ihnpan.pl/wp-content/uploads/2025/03/Analecta_2024_1_9-Kossarzecki.pdf '
+  - text: 'H - Pasek, Jan Chryzostom. Memoirs of the Polish Baroque: The Writings
+      of Jan Chryzostom Pasek, a Squire of the Commonwealth of Poland and Lithuania.
+      S.l.: University of California Press, 1976.'
+    link: https://books.google.com/books?id=UXOyzpp6YJoC
 --- !u!1 &1256863226
 GameObject:
   m_ObjectHideFlags: 0
