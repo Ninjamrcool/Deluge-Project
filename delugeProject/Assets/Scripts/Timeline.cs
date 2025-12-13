@@ -29,6 +29,8 @@ public class Timeline : MonoBehaviour, IPointerDownHandler
     private bool dragging = false;    
     private InputAction mousePosition;
     private InputAction mouseDown;
+    private InputAction forwardsTime;
+    private InputAction backwardsTime;
 
     public delegate void TimelineUpdated(float year);
     public event TimelineUpdated timelineUpdated;
@@ -40,6 +42,8 @@ public class Timeline : MonoBehaviour, IPointerDownHandler
 
         mousePosition = InputSystem.actions.FindAction("MousePosition");
 		mouseDown = InputSystem.actions.FindAction("MouseDown");
+		forwardsTime = InputSystem.actions.FindAction("ForwardsTime");
+		backwardsTime = InputSystem.actions.FindAction("BackwardsTime");
 
         for (int i = 0; i < validTimelineYears.Length; i++)
 		{
@@ -47,6 +51,36 @@ public class Timeline : MonoBehaviour, IPointerDownHandler
             GameObject timelinevalidYear = Instantiate(timelineValidYearPrefab, timelineYearsFolder);
 			timelinevalidYear.GetComponent<RectTransform>().anchoredPosition = new Vector2(instantiateXPos, rectTransform.anchoredPosition.y);
 		}
+    }
+
+    private void Update()
+    {
+        if (forwardsTime.WasPressedThisFrame() && !dragging)
+        {
+            for (int i = 0; i < validTimelineYears.Length; i++)
+            {
+                if (validTimelineYears[i] > currentYear)
+                {
+                    rectTransform.anchoredPosition = new Vector2(ConvertValidTimelineYearsIndexToPosition(i), rectTransform.anchoredPosition.y);
+                    currentYear = validTimelineYears[i];
+                    UpdateTimelineYear(currentYear);
+                    return;
+                }
+            }            
+        }
+        else if (backwardsTime.WasPressedThisFrame() && !dragging)
+        {
+            for (int i = validTimelineYears.Length - 1; i >= 0; i--)
+            {
+                if (validTimelineYears[i] < currentYear)
+                {
+                    rectTransform.anchoredPosition = new Vector2(ConvertValidTimelineYearsIndexToPosition(i), rectTransform.anchoredPosition.y);
+                    currentYear = validTimelineYears[i];
+                    UpdateTimelineYear(currentYear);
+                    return;
+                }
+            }            
+        }
     }
 
     public void OnPointerDown(PointerEventData eventData)

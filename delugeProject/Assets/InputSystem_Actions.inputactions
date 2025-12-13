@@ -50,6 +50,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "ForwardsTime",
+                    "type": "Button",
+                    "id": "db4f86eb-e484-4ddf-becd-d0edf4cea199",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "BackwardsTime",
+                    "type": "Button",
+                    "id": "bd4813f4-a470-4f7b-b9e2-dc0bf2bcd29e",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -237,6 +255,28 @@
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
                     "action": "EscapeUI",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "31b45cd2-d480-4227-8ad5-f52d2733ca0c",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "ForwardsTime",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "15a13073-1cc0-47e9-873d-6a61bed029be",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "BackwardsTime",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
